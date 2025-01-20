@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chefim iOS App - We're Cooking Something Special</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">        
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G2V5X9544T"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G2V5X9544T');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-image: url('real.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: #ffffff;
+            position: relative;
+            padding: 2rem;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(0, 0, 0, 0.85) 0%,
+                rgba(0, 0, 0, 0.65) 100%
+            );
+            z-index: 1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 3rem;
+            z-index: 2;
+            max-width: 600px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-right: 5%;
+        }
+
+        .content {
+            width: 100%;
+        }
+
+        .app-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            max-width: 600px;
+        }
+
+        .app-name {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.2rem;
+            color: #FFB800;
+            display: inline;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .tagline {
+            font-family: 'Clash Display', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+
+        .email-form {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .email-input {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .email-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .submit-button {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-store-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            width: 100%;
+        }
+
+        .app-store-badge {
+            width: 200px;
+            height: auto;
+        }
+
+        .notify-text {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            opacity: 0.8;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .privacy-note {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 1200px) {
+            body {
+                justify-content: center;
+                padding: 1rem;
+            }
+
+            .container {
+                margin-right: 0;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 2rem;
+            }
+            
+            .app-title {
+                font-size: 2.8rem;
+            }
+
+            .tagline {
+                font-size: 1.4rem;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .submit-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="app-name">Chefim 👨‍🍳</h1>
+            <h1 class="app-title">is cooking for you</h1>
+            <p class="description">Turn your kitchen into a pro culinary studio with AI-powered recipes, timing, and hands-free voice assistance!</p>
+            
+            <form class="email-form" action="https://formspree.io/f/xeooylnj" method="POST">
+                <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="submit-button">Get Early Access</button>
+            </form>
+            <p class="privacy-note">✓ No spam, notifications only about app launch and updates</p>
+
+            <div class="app-store-container">
+                <img class="app-store-badge" src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store (Coming Soon)">
+                <p class="notify-text">Launching soon on the App Store</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
